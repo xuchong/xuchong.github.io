@@ -21,3 +21,5 @@ markdown: kramdown
 
 #own settings
 repository: "xuchong/xuchong.github.io"
+
+theme: jekyll-theme-modernist
