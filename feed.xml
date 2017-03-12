@@ -6,14 +6,15 @@
 </description>
     <link>http://xuchong.github.com/</link>
     <atom:link href="http://xuchong.github.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 13 Mar 2017 01:29:39 +0800</pubDate>
-    <lastBuildDate>Mon, 13 Mar 2017 01:29:39 +0800</lastBuildDate>
+    <pubDate>Mon, 13 Mar 2017 01:43:11 +0800</pubDate>
+    <lastBuildDate>Mon, 13 Mar 2017 01:43:11 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
         <title>First Post</title>
-        <description>&lt;p&gt;Posts 存放在 &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; 文件夹中，命名格式为： &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; .
-静态网页可以是 &lt;code class=&quot;highlighter-rouge&quot;&gt;.md&lt;/code&gt; 或者 &lt;code class=&quot;highlighter-rouge&quot;&gt;.html&lt;/code&gt; 格式，存放在根目录或者非系统子文件夹下.&lt;/p&gt;
+        <description>&lt;p&gt;Posts 存放在 &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; 文件夹中，命名格式为： &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; .&lt;/p&gt;
+
+&lt;p&gt;静态网页可以是 &lt;code class=&quot;highlighter-rouge&quot;&gt;.md&lt;/code&gt; 或者 &lt;code class=&quot;highlighter-rouge&quot;&gt;.html&lt;/code&gt; 格式，存放在根目录或者非系统子文件夹下.&lt;/p&gt;
 
 &lt;p&gt;Windows下 &lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt; 的运行： &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec jekyll server&lt;/code&gt;.&lt;/p&gt;
 
@@ -27,11 +28,11 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt; 官方文档：&lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt; Github仓库：&lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt; 论坛：&lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt; 官方文档：&lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt;.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt; Github仓库：&lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt; 论坛：&lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 </description>
         <pubDate>Fri, 05 Aug 2016 17:39:43 +0800</pubDate>
