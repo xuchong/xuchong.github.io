@@ -6,9 +6,38 @@
 </description>
     <link>http://xuchong.github.com/</link>
     <atom:link href="http://xuchong.github.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 13 Mar 2017 01:43:11 +0800</pubDate>
-    <lastBuildDate>Mon, 13 Mar 2017 01:43:11 +0800</lastBuildDate>
+    <pubDate>Tue, 14 Mar 2017 00:42:19 +0800</pubDate>
+    <lastBuildDate>Tue, 14 Mar 2017 00:42:19 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>小憩</title>
+        <description>&lt;h3 id=&quot;section&quot;&gt;基本流程&lt;/h3&gt;
+
+&lt;p&gt;通过 &lt;strong&gt;Atom&lt;/strong&gt; 撰写 &lt;strong&gt;Markdown&lt;/strong&gt; 博客，使用 &lt;strong&gt;Git&lt;/strong&gt; 管理博客的 &lt;strong&gt;Jekyll&lt;/strong&gt; 代码，发布build后的html博客到Github上.&lt;/p&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;后知后觉&lt;/h3&gt;
+
+&lt;p&gt;Blog还有很多地方可以进一步提升，包括界面的风格样式，流量和交互模块的添加，需要以后慢慢的打磨呀.&lt;/p&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;深夜有感&lt;/h3&gt;
+
+&lt;p&gt;毕业、找工作的压力悄然而至，生活有些不开心了&lt;/p&gt;
+
+&lt;p&gt;既然选择了北京，那么就 &lt;strong&gt;&lt;em&gt;北京&lt;/em&gt;&lt;/strong&gt; 吧&lt;/p&gt;
+
+&lt;h6 id=&quot;section-3&quot;&gt;鱼儿有七秒的记忆&lt;/h6&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://oixrb0omv.bkt.clouddn.com/fish_cartoon.jpg&quot; alt=&quot;鱼鱼&quot; title=&quot;鱼鱼&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 15 Aug 2016 21:01:52 +0800</pubDate>
+        <link>http://xuchong.github.com/life/2016/08/15/life-post.html</link>
+        <guid isPermaLink="true">http://xuchong.github.com/life/2016/08/15/life-post.html</guid>
+        
+        
+        <category>life</category>
+        
+      </item>
     
       <item>
         <title>First Post</title>
@@ -17,6 +46,8 @@
 &lt;p&gt;静态网页可以是 &lt;code class=&quot;highlighter-rouge&quot;&gt;.md&lt;/code&gt; 或者 &lt;code class=&quot;highlighter-rouge&quot;&gt;.html&lt;/code&gt; 格式，存放在根目录或者非系统子文件夹下.&lt;/p&gt;
 
 &lt;p&gt;Windows下 &lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt; 的运行： &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec jekyll server&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;相关的管理工具： &lt;em&gt;bundle&lt;/em&gt;  &amp;amp;  &lt;em&gt;gem&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt; 的代码段样式为：&lt;/p&gt;
 
@@ -28,11 +59,11 @@
 
 &lt;hr /&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt; 官方文档：&lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt;.
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt; Github仓库：&lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt; 论坛：&lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt; 官方文档：&lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt; Github仓库：&lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt; 论坛：&lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 05 Aug 2016 17:39:43 +0800</pubDate>
