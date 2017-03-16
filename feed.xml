@@ -6,21 +6,70 @@
 </description>
     <link>http://xuchong.github.com/</link>
     <atom:link href="http://xuchong.github.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 14 Mar 2017 00:42:19 +0800</pubDate>
-    <lastBuildDate>Tue, 14 Mar 2017 00:42:19 +0800</lastBuildDate>
+    <pubDate>Thu, 16 Mar 2017 13:23:53 +0800</pubDate>
+    <lastBuildDate>Thu, 16 Mar 2017 13:23:53 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
+        <title>Face Detection Dataset</title>
+        <description>&lt;h4 id=&quot;section&quot;&gt;概要&lt;/h4&gt;
+
+&lt;p&gt;人脸检测属于 &lt;strong&gt;Object Detection&lt;/strong&gt; 方向的一个子模块，通过机器学习进行人脸检测，需要大量的标注数据进行模型的训练，而经过最近的学习整理，分享几个比较合适的。&lt;/p&gt;
+
+&lt;h5 id=&quot;wider-facehttpmmlabiecuhkeduhkprojectswiderface&quot;&gt;&lt;a href=&quot;http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/&quot;&gt;WIDER FACE&lt;/a&gt;&lt;/h5&gt;
+
+&lt;p&gt;&lt;em&gt;WIDER FACE&lt;/em&gt; 数据集是一个人脸检测基准数据库，其中的图片是从已经公布的&lt;a href=&quot;http://yjxiong.me/event_recog/WIDER/&quot;&gt;WIDER&lt;/a&gt;数据集上挑选出来的。它包含32203个图像和393703个人脸图像，在尺度，姿势，闭塞，表达等方面表现出了大的变化。&lt;em&gt;WIDER FACE&lt;/em&gt; 数据集基于61个事件类型进行组织的。对于每一个事件类型，随机选取40%的数据作为训练集、10%的数据集作为验证集、50%的数据作为测试集。同时，&lt;em&gt;WIDER FACE&lt;/em&gt; 数据集采用和 &lt;a href=&quot;http://host.robots.ox.ac.uk:8080/pascal/VOC/&quot;&gt;PASCAL VOC&lt;/a&gt;数据集相同的评估度量策略。 和 &lt;em&gt;MALF&lt;/em&gt;、_Caltech _ 数据集一样, 并不公开测试集的 ground truth (考试的时候，当然不公布正确答案啦)。用户被要求提交最终的预测文件，从而通过网站进行评估，给出结果。
+&lt;img src=&quot;http://oixrb0omv.bkt.clouddn.com/WIDER%20Face%20intro.jpg&quot; alt=&quot;WIDER FACE&quot; title=&quot;WIDER FACE&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;ijba-ahttpswwwnistgovitliadimage-groupijba-dataset-request-form&quot;&gt;&lt;a href=&quot;https://www.nist.gov/itl/iad/image-group/ijba-dataset-request-form&quot;&gt;IJBA-A&lt;/a&gt;&lt;/h5&gt;
+
+&lt;p&gt;&lt;em&gt;IJBA-A&lt;/em&gt; 数据集全称_IARPA Janus Benchmark A_，是由_IARPA_(the Intelligence Advanced Research Projects Activity)公开的数据集，包含24327个图像和49759个人脸，可以用于人脸的检测和识别。数据集需要进行申请，经过NIST(美国国家标准技术研究所)允许同意后，才能获取到。&lt;/p&gt;
+
+&lt;h5 id=&quot;malfhttpwwwcbsriaaccnfaceevaluation&quot;&gt;&lt;a href=&quot;http://www.cbsr.ia.ac.cn/faceevaluation/&quot;&gt;MALF&lt;/a&gt;&lt;/h5&gt;
+
+&lt;p&gt;&lt;em&gt;MALF&lt;/em&gt; 数据集全称_Multi-Attribute Labelled Faces_，是一个大型数据库，被设计用于野外细粒度人脸检测评估。网站提供了：
+* 数据库的描述、标注和评估规则
+* 如何下载数据库进行评估
+* 如何向该网站提交你的检测结果，和他人进行对比
+* 所有算法的性能对比&lt;/p&gt;
+
+&lt;p&gt;数据库包含 5,250 张图片和 11,931 张标注的人脸，图片都来自于互联网。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://oixrb0omv.bkt.clouddn.com/malf_intro.png&quot; alt=&quot;MALF&quot; title=&quot;MALF&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;fddbhttpvis-wwwcsumassedufddbindexhtml&quot;&gt;&lt;a href=&quot;http://vis-www.cs.umass.edu/fddb/index.html&quot;&gt;FDDB&lt;/a&gt;&lt;/h5&gt;
+
+&lt;p&gt;&lt;em&gt;FDDB&lt;/em&gt; 数据集全称_Face Detection Data Set and Benchmark_，是一个用于研究无约束条件下人脸检测问题的数据集。数据库包含 2，845 张图片和 5，171  张标注的人脸，图片都来自于 &lt;em&gt;Faces in the Wild&lt;/em&gt; 数据集。&lt;/p&gt;
+
+&lt;h5 id=&quot;afwhttpwwwicsucieduxzhuface&quot;&gt;&lt;a href=&quot;http://www.ics.uci.edu/~xzhu/face/&quot;&gt;AFW&lt;/a&gt;&lt;/h5&gt;
+
+&lt;p&gt;&lt;em&gt;AFW&lt;/em&gt; 数据集全称_Annotated Faces in the Wild_，AFW数据集是使用Flickr（雅虎旗下图片分享网站）图像建立的人脸图像库，包含205个图像，其中有473个标记的人脸。对于每一个人脸都包含一个长方形边界框，6个地标和相关的姿势角度。数据库虽然不大，额外的好处是作者给出了其2012 CVPR的论文和程序以及训练好的模型。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://oixrb0omv.bkt.clouddn.com/AFW_results_small.jpg&quot; alt=&quot;AFW&quot; title=&quot;AFW&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 21 Aug 2016 11:01:43 +0800</pubDate>
+        <link>http://xuchong.github.com/dataset/facedetection/2016/08/21/face-detetion-dataset.html</link>
+        <guid isPermaLink="true">http://xuchong.github.com/dataset/facedetection/2016/08/21/face-detetion-dataset.html</guid>
+        
+        
+        <category>dataset</category>
+        
+        <category>FaceDetection</category>
+        
+      </item>
+    
+      <item>
         <title>小憩</title>
-        <description>&lt;h3 id=&quot;section&quot;&gt;基本流程&lt;/h3&gt;
+        <description>&lt;h4 id=&quot;section&quot;&gt;基本流程&lt;/h4&gt;
 
 &lt;p&gt;通过 &lt;strong&gt;Atom&lt;/strong&gt; 撰写 &lt;strong&gt;Markdown&lt;/strong&gt; 博客，使用 &lt;strong&gt;Git&lt;/strong&gt; 管理博客的 &lt;strong&gt;Jekyll&lt;/strong&gt; 代码，发布build后的html博客到Github上.&lt;/p&gt;
 
-&lt;h3 id=&quot;section-1&quot;&gt;后知后觉&lt;/h3&gt;
+&lt;h4 id=&quot;section-1&quot;&gt;后知后觉&lt;/h4&gt;
 
 &lt;p&gt;Blog还有很多地方可以进一步提升，包括界面的风格样式，流量和交互模块的添加，需要以后慢慢的打磨呀.&lt;/p&gt;
 
-&lt;h3 id=&quot;section-2&quot;&gt;深夜有感&lt;/h3&gt;
+&lt;h4 id=&quot;section-2&quot;&gt;深夜有感&lt;/h4&gt;
 
 &lt;p&gt;毕业、找工作的压力悄然而至，生活有些不开心了&lt;/p&gt;
 
