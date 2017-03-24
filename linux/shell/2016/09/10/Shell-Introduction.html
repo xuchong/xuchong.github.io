@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>Shell Introduction</title>
+  <meta name="description" content="Shell 就是一个程序，它接受从键盘输入的命令， 然后把命令传递给操作系统去执行。换句话说，Shell 是一个命令语言解释器（command-language interpreter），你在提示符下输入的每个命令都由shell先解释然后传Linux内核。拥有自己内建的 shell 命令集。此外，shell也能被...">
+
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/blog.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://xuchong.github.com/linux/shell/2016/09/10/Shell-Introduction.html">
+  <link rel="alternate" type="application/rss+xml" title="春风十里" href="http://xuchong.github.com/feed.xml">
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?a1fb7368c2595d16786b1001ee2dc8f9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-93832020-1', 'auto');
+    ga('send', 'pageview');
+
+ </script>
+
+</head>
+
+
+  <body>
+
+    <div class="wrapper">
+    <div class="box">
+        <div class="row">
+
+            <!-- sidebar -->
+            <div class="column col-sm-3" id="sidebar">
+                <a class="logo" href="/">B</a>
+                <ul class="nav">
+
+                    <li><a class="page-link" href="/posts">Posts</a></li>
+                    <li><a class="page-link" href="/archive">Archive</a></li>
+                    <li><a class="page-link" href="/about">About</a></li>
+
+                </ul>
+                <ul class="nav hidden-xs" id="sidebar-footer">
+                    <li>
+                      <a href="#" ><h3>春风十里</h3>不如你</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /sidebar -->
+
+            <!-- main -->
+            <div class="column col-sm-9" id="main">
+                <div class="padding">
+                    <div class="full col-sm-9">
+                        <!-- page content -->
+                        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Shell Introduction</h1>
+    <p class="post-meta"><time datetime="2016-09-10T23:34:11+08:00" itemprop="datePublished">Sep 10, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p><strong>Shell</strong> 就是一个程序，它接受从键盘输入的命令， 然后把命令传递给操作系统去执行。换句话说，<strong>Shell</strong> 是一个命令语言解释器（command-language interpreter），你在提示符下输入的每个命令都由shell先解释然后传Linux内核。拥有自己内建的 shell 命令集。此外，shell也能被系统中其他有效的Linux 实用程序和应用程序（utilities and application programs）所调用。</p>
+
+<p>在Linux 和 UNIX系统里可以使用多种不同的 Shell可以使用。最常用的几种是 <strong>Bourne shell (sh)</strong>，<strong>C shell(csh)</strong>，和<strong>Korn shell (ksh)</strong>。三种Shell都有它们的优点和缺点。<strong>Bourne shell</strong> 的作者是 Steven Bourne。它是 UNIX 最初使用的Shell并且在每种 UNIX 上都可以使用。<strong>Bourne shell</strong> 在 Shell编程方面相当优秀，但在处理与用户的交互方面作得不如其他几种 Shell。</p>
+
+<p><strong>Shell</strong>脚本（shell script），是一种为shell编写的脚本程序。业界所说的shell通常都是指shell脚本，但同学要知道，shell和shell script是两个不同的概念。下面就是一个简单的创建shell_cut文件夹并在其中生成10个空文本文件的Shell脚本。</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="c">#!/bin/sh</span>
+<span class="nb">cd</span> ~
+mkdir shell_tut
+<span class="nb">cd </span>shell_tut
+
+<span class="k">for</span> <span class="o">((</span><span class="nv">i</span><span class="o">=</span>0; i&lt;10; i++<span class="o">))</span>; <span class="k">do
+	</span>touch <span class="nv">$i</span>.txt
+<span class="k">done</span>
+</code></pre>
+</div>
+
+<p><strong>Bash</strong> 是Unix Shell中的一种，为<a href="https://zh.wikipedia.org/wiki/Bourne_shell">Bourne shell</a>的后继兼容版本与开放源代码版本，它的名称来自<a href="https://zh.wikipedia.org/wiki/Bourne_shell">Bourne shell</a>（sh）的一个双关语（<em>Bourne again</em> / born again）：<strong>B</strong>ourne-<strong>A</strong>gain <strong>SH</strong>ell。</p>
+
+<p><strong>Bash</strong>是 Bourne shell 的扩展 Bash 与 Bourne shell 完全向后兼容，并且在 Bourne shell 的基础上增加和增强了很多特性。bash 也包含了很多 C 和 Korn shell 里的优点。bash 有很灵活和强大的编程接口，同时又有很友好的用户界面。总的来说，Bash不仅是一个满足<a href="https://zh.wikipedia.org/wiki/POSIX">POSIX</a>规范的shell，还有很多扩展。</p>
+
+<hr />
+
+<p><code class="highlighter-rouge">Steve Bourne</code>:<a href="http://en.wikipedia.org/wiki/Steve_Bourne">Bourne Shell 之父简介</a>.</p>
+
+<p><code class="highlighter-rouge">Shell</code> ：<a href="http://en.wikipedia.org/wiki/Shell_(computing)">参考资料</a>.</p>
+
+
+  </div>
+
+</article>
+
+                    </div><!-- /col-9 -->
+                </div><!-- /padding -->
+            </div>
+            <!-- /main -->
+
+        </div>
+    </div>
+    </div>
+
+  </body>
+
+</html>
