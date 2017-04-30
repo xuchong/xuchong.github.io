@@ -7,13 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>Face Detection Dataset</title>
-  <meta name="description" content="概要人脸检测属于 Object Detection 方向的一个子模块，通过机器学习进行人脸检测，需要大量的标注数据进行模型的训练，而经过最近的学习整理，分享几个比较合适的。WIDER FACEWIDER FACE 数据集是一个人脸检测基准数据库，其中的图片是从已经公布的WIDER数据集上挑选出来的。它包含3220...">
+  <meta name="description" content="概要">
 
   <link rel="stylesheet" href="/css/bootstrap.css">
   <link rel="stylesheet" href="/css/blog.css">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://xuchong.github.com/dataset/facedetection/2016/08/21/face-detetion-dataset.html">
+  <link rel="stylesheet" href="/css/mermaid.css">
+  <link rel="canonical" href="http://xuchong.github.com/dataset/facedetection/2016/08/22/face-detetion-dataset.html">
   <link rel="alternate" type="application/rss+xml" title="春风十里" href="http://xuchong.github.com/feed.xml">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
   <script>
     var _hmt = _hmt || [];
@@ -72,7 +74,7 @@
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">Face Detection Dataset</h1>
-    <p class="post-meta"><time datetime="2016-08-21T11:01:43+08:00" itemprop="datePublished">Aug 21, 2016</time></p>
+    <p class="post-meta"><time datetime="2016-08-22T11:01:43+08:00" itemprop="datePublished">Aug 22, 2016</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
@@ -82,20 +84,23 @@
 
 <h5 id="wider-facehttpmmlabiecuhkeduhkprojectswiderface"><a href="http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/">WIDER FACE</a></h5>
 
-<p><em>WIDER FACE</em> 数据集是一个人脸检测基准数据库，其中的图片是从已经公布的<a href="http://yjxiong.me/event_recog/WIDER/">WIDER</a>数据集上挑选出来的。它包含32203个图像和393703个人脸图像，在尺度，姿势，闭塞，表达等方面表现出了大的变化。<em>WIDER FACE</em> 数据集基于61个事件类型进行组织的。对于每一个事件类型，随机选取40%的数据作为训练集、10%的数据集作为验证集、50%的数据作为测试集。同时，<em>WIDER FACE</em> 数据集采用和 <a href="http://host.robots.ox.ac.uk:8080/pascal/VOC/">PASCAL VOC</a>数据集相同的评估度量策略。 和 <em>MALF</em>、_Caltech _ 数据集一样, 并不公开测试集的 ground truth (考试的时候，当然不公布正确答案啦)。用户被要求提交最终的预测文件，从而通过网站进行评估，给出结果。
+<p><em>WIDER FACE</em> 数据集是一个人脸检测基准数据库，其中的图片是从已经公布的<a href="http://yjxiong.me/event_recog/WIDER/">WIDER</a>数据集上挑选出来的。它包含32203个图像和393703个人脸图像，在尺度，姿势，闭塞，表达等方面表现出了大的变化。<em>WIDER FACE</em> 数据集基于61个事件类型进行组织的。对于每一个事件类型，随机选取40%的数据作为训练集、10%的数据集作为验证集、50%的数据作为测试集。同时，<em>WIDER FACE</em> 数据集采用和 <a href="http://host.robots.ox.ac.uk:8080/pascal/VOC/">PASCAL VOC</a>数据集相同的评估度量策略。 和 <em>MALF</em>、<em>Caltech</em> 数据集一样, 并不公开测试集的 ground truth (考试的时候，当然不公布正确答案啦)。用户被要求提交最终的预测文件，从而通过网站进行评估，给出结果。
 <img src="http://oixrb0omv.bkt.clouddn.com/WIDER%20Face%20.jpg" alt="WIDER FACE" title="WIDER FACE" /></p>
 
 <h5 id="ijba-ahttpswwwnistgovitliadimage-groupijba-dataset-request-form"><a href="https://www.nist.gov/itl/iad/image-group/ijba-dataset-request-form">IJBA-A</a></h5>
 
-<p><em>IJBA-A</em> 数据集全称_IARPA Janus Benchmark A_，是由_IARPA_(the Intelligence Advanced Research Projects Activity)公开的数据集，包含24327个图像和49759个人脸，可以用于人脸的检测和识别。数据集需要进行申请，经过NIST(美国国家标准技术研究所)允许同意后，才能获取到。</p>
+<p><em>IJBA-A</em> 数据集全称<em>IARPA Janus Benchmark A</em>，是由 <em>IARPA</em> (the Intelligence Advanced Research Projects Activity)公开的数据集，包含24327个图像和49759个人脸，可以用于人脸的检测和识别。数据集需要进行申请，经过NIST(美国国家标准技术研究所)允许同意后，才能获取到。</p>
 
 <h5 id="malfhttpwwwcbsriaaccnfaceevaluation"><a href="http://www.cbsr.ia.ac.cn/faceevaluation/">MALF</a></h5>
 
-<p><em>MALF</em> 数据集全称_Multi-Attribute Labelled Faces_，是一个大型数据库，被设计用于野外细粒度人脸检测评估。网站提供了：
-* 数据库的描述、标注和评估规则
-* 如何下载数据库进行评估
-* 如何向该网站提交你的检测结果，和他人进行对比
-* 所有算法的性能对比</p>
+<p><em>MALF</em> 数据集全称 <em>Multi-Attribute Labelled Faces</em> ，是一个大型数据库，被设计用于野外细粒度人脸检测评估。网站提供了：</p>
+
+<ul>
+  <li>数据库的描述、标注和评估规则</li>
+  <li>如何下载数据库进行评估</li>
+  <li>如何向该网站提交你的检测结果，和他人进行对比</li>
+  <li>所有算法的性能对比</li>
+</ul>
 
 <p>数据库包含 5,250 张图片和 11,931 张标注的人脸，图片都来自于互联网。</p>
 
@@ -103,11 +108,11 @@
 
 <h5 id="fddbhttpvis-wwwcsumassedufddbindexhtml"><a href="http://vis-www.cs.umass.edu/fddb/index.html">FDDB</a></h5>
 
-<p><em>FDDB</em> 数据集全称_Face Detection Data Set and Benchmark_，是一个用于研究无约束条件下人脸检测问题的数据集。数据库包含 2，845 张图片和 5，171  张标注的人脸，图片都来自于 <em>Faces in the Wild</em> 数据集。</p>
+<p><em>FDDB</em> 数据集全称 <em>Face Detection Data Set and Benchmark</em> ，是一个用于研究无约束条件下人脸检测问题的数据集。数据库包含 2，845 张图片和 5，171  张标注的人脸，图片都来自于 <em>Faces in the Wild</em> 数据集。</p>
 
 <h5 id="afwhttpwwwicsucieduxzhuface"><a href="http://www.ics.uci.edu/~xzhu/face/">AFW</a></h5>
 
-<p><em>AFW</em> 数据集全称_Annotated Faces in the Wild_，AFW数据集是使用Flickr（雅虎旗下图片分享网站）图像建立的人脸图像库，包含205个图像，其中有473个标记的人脸。对于每一个人脸都包含一个长方形边界框，6个地标和相关的姿势角度。数据库虽然不大，额外的好处是作者给出了其2012 CVPR的论文和程序以及训练好的模型。</p>
+<p><em>AFW</em> 数据集全称 <em>Annotated Faces in the Wild</em> ，AFW数据集是使用Flickr（雅虎旗下图片分享网站）图像建立的人脸图像库，包含205个图像，其中有473个标记的人脸。对于每一个人脸都包含一个长方形边界框，6个地标和相关的姿势角度。数据库虽然不大，额外的好处是作者给出了其2012 CVPR的论文和程序以及训练好的模型。</p>
 
 <p><img src="http://oixrb0omv.bkt.clouddn.com/AFW_results_small.jpg" alt="AFW" title="AFW" /></p>
 

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>Image Convolution 图像卷积</title>
+  <meta name="description" content="  Convolution is the most important and fundamental concept in signal processing and analysis. By using convolution, we can construct the output of system fo...">
+
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/blog.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/mermaid.css">
+  <link rel="canonical" href="http://xuchong.github.com/imageprocessing/cv/2016/09/28/image-processing.html">
+  <link rel="alternate" type="application/rss+xml" title="春风十里" href="http://xuchong.github.com/feed.xml">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?a1fb7368c2595d16786b1001ee2dc8f9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-93832020-1', 'auto');
+    ga('send', 'pageview');
+
+ </script>
+
+</head>
+
+
+  <body>
+
+    <div class="wrapper">
+    <div class="box">
+        <div class="row">
+
+            <!-- sidebar -->
+            <div class="column col-sm-3" id="sidebar">
+                <a class="logo" href="/">B</a>
+                <ul class="nav">
+
+                    <li><a class="page-link" href="/posts">Posts</a></li>
+                    <li><a class="page-link" href="/archive">Archive</a></li>
+                    <li><a class="page-link" href="/about">About</a></li>
+
+                </ul>
+                <ul class="nav hidden-xs" id="sidebar-footer">
+                    <li>
+                      <a href="#" ><h3>春风十里</h3>不如你</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /sidebar -->
+
+            <!-- main -->
+            <div class="column col-sm-9" id="main">
+                <div class="padding">
+                    <div class="full col-sm-9">
+                        <!-- page content -->
+                        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Image Convolution 图像卷积</h1>
+    <p class="post-meta"><time datetime="2016-09-28T20:50:13+08:00" itemprop="datePublished">Sep 28, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <blockquote>
+  <p><em>Convolution is the most important and fundamental concept in signal processing and analysis. By using convolution, we can construct the output of system for any arbitrary input signal, if we know the impulse response of system.</em></p>
+</blockquote>
+
+<p>在信号的处理和分析中，卷积操作起着极为重要和根本性的作用。如果我们知道系统的脉冲响应，通过卷积操作，我们可以对任意的输入信号，构造出系统的输出。</p>
+
+<h4 id="d">1-D卷积</h4>
+
+<p>卷积在离散时域中的数学定义为：</p>
+
+<script type="math/tex; mode=display">y[n]=x[n]*h[n]=\displaystyle\sum_{k=-\infty}^{\infty}x[k]·h[n-k]</script>
+
+<p>x[n]是输入信号，h[n]是响应脉冲，y[n]是输出。公式中的 <strong>*</strong> 号代表卷积，我们将x[k]项乘以一个时间偏移量h[n-k]，并将它们的相乘结果相加。</p>
+
+<p>而理解卷积的前提是需要理解脉冲响应和脉冲分解。</p>
+
+<p>通过结合脉冲响应和脉冲分解的属性性质，我们最终能构造出卷积的等式。在线性和时间不变的系统中，由多个输入单元同时计算得到的结果等价于由这几个单元分别输入计算的结果之和。</p>
+
+<p>总而言之，一个输入信号可以被分解为一组脉冲，而输出信号能够由变化和偏移的响应脉冲组合而成。</p>
+
+<h4 id="d-">2-D 卷积</h4>
+
+<p>二维卷积是之前一维卷积的扩展，二维卷积同时对二维的空间域中的x轴方向和y轴方向进行卷积。二维卷积通常被用作图像的处理，例如图像的平滑、锐化和边缘检测等。</p>
+
+<p><img src="http://oixrb0omv.bkt.clouddn.com/conv2d_delta.jpg" alt="二维卷积" /><img src="http://oixrb0omv.bkt.clouddn.com/conv_img10.gif" alt="二维卷积" /></p>
+
+<p>简单的来讲，卷积就是对两个同等维度的数组进行相乘，得到另一个同等维度的数组。通常，第一个数组如果是二维的图像，那么第二个数组是一个比第一个图像数组要小很多的二维数组，我们一般把它称作 <strong>卷积核</strong> （kernel）。下图中的每一个单元格代表图像的像素值或者kernel的值，左图为图像的二维数组，右图为卷积核的二维数组。</p>
+
+<p><img src="http://oixrb0omv.bkt.clouddn.com/convxmp.gif" alt="image and kernel" /></p>
+
+<p>卷积操作就是将右图的卷积核在左图中的图像中滑动，从左上角到右下角，一个一个像素的移动，同时保证卷积核完全在图像内而不出界（当然，卷积的操作存在不同的实现方式，这只是其中一种）。卷积核移动的每一次，对应一个数值输出，输出值等于卷积核和对应的图像像素值相乘的积德和。例如，当卷积核从左上角依次移动到右下角时，最后一次输出值的计算为：</p>
+
+<script type="math/tex; mode=display">O_{57}=I_{57}K_{11}+I_{58}K_{12}+I_{59}K_{13}+I_{67}K_{21}+I_{68}K_{22}+I_{69}K_{23}</script>
+
+<p>如果二位图像数组有M行，N列，卷积核有m行，n列，则通过以上方式实现的卷积运算得到的最终结果是一个二位的数组，大小为M-m+1行，N-n+1列。</p>
+
+<p>以上操作，用数学的表达方式为：</p>
+
+<script type="math/tex; mode=display">O(i,j)=\displaystyle\sum_{k=1}^m\sum_{l=1}^n I(i+k-1,j+l-1)K(k,l)</script>
+
+<p>其中，</p>
+
+<script type="math/tex; mode=display">i \in [1,M-m+1]   ,  j \in [1,N-n+1]</script>
+
+<p>注意⚠️，以上只是图像卷积实现的一种方式，卷积操作还可以对图像进行padding操作，设定合适的stride，从而可以达到输出结果和原图像尺寸相同大小。</p>
+
+<p>卷积可以实现很多功能，例如可以用作空间的过滤器，特征提取器等。典型的代表有高斯平滑（Gaussian Smoothing），Sobel边缘检测器。</p>
+
+<p>卷积核的不同（包括核的大小、核的值），会产生不同的效果。设计卷积核需要高等的数学知识。当然你也可以从网络上查找到很多现成的卷积核设计。举些例子吧（左图对应卷积核，右图对应图像效果）。</p>
+
+<h5 id="section">图像锐化</h5>
+
+<p><img src="http://oixrb0omv.bkt.clouddn.com/convolution-sharpen.png" alt="kernel" />      <img src="http://oixrb0omv.bkt.clouddn.com/generic-taj-convmatrix-sharpen.jpg" alt="image" /></p>
+
+<h5 id="section-1">图像模糊</h5>
+
+<p><img src="http://oixrb0omv.bkt.clouddn.com/convolution-blur.png" alt="kernel" />      <img src="http://oixrb0omv.bkt.clouddn.com/generic-taj-convmatrix-blur.jpg" alt="image" /></p>
+
+<h5 id="section-2">图像边缘增强</h5>
+
+<p><img src="http://oixrb0omv.bkt.clouddn.com/convolution-edge.png" alt="kernel" />      <img src="http://oixrb0omv.bkt.clouddn.com/generic-taj-convmatrix-edge-enhance.jpg" alt="image" /></p>
+
+<h5 id="section-3">图像边缘检测</h5>
+
+<p><img src="http://oixrb0omv.bkt.clouddn.com/convolution-edge-detect1.png" alt="kernel" />      <img src="http://oixrb0omv.bkt.clouddn.com/generic-taj-convmatrix-edge-detect.jpg" alt="image" /></p>
+
+<h5 id="section-4">图像浮雕</h5>
+
+<p><img src="http://oixrb0omv.bkt.clouddn.com/convolution-emboss.png" alt="kernel" />      <img src="http://oixrb0omv.bkt.clouddn.com/generic-taj-convmatrix-emboss.jpg" alt="image" /></p>
+
+<hr />
+
+<p><code class="highlighter-rouge">注意事项</code> ：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>卷积核的旋转操作（180度旋转，flip）
+</code></pre>
+</div>
+
+<font color="red">为什么要进行这个操作？</font>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>进行flip旋转并不意味着有什么好处或者能避免什么灾难性的后果。主要是二维卷积的定义就是这样的。如果你不flip旋转，你就违背了二维卷积的最初的定义。而不flip旋转的卷积有着另外一个名字：关联（correlation）。
+
+那么人们为什么定义二维卷积时要进行flip旋转呢？这起源于一维卷积时为了处理信号响应的一些缺点，需要进行flip旋转操作。所以，人们为了保持二维卷积和一维卷积的一致性，对二维卷积进行了flip旋转操作。
+</code></pre>
+</div>
+
+
+  </div>
+
+</article>
+
+                    </div><!-- /col-9 -->
+                </div><!-- /padding -->
+            </div>
+            <!-- /main -->
+
+        </div>
+    </div>
+    </div>
+
+  </body>
+
+</html>
