@@ -6,15 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>Archive</title>
-  <meta name="description" content=">  Blog of Xu R, Studying, Living, Creating .Love U & Me > > Machine Learning, Object Detection, Algorithm 's  follower
-">
+  <title>分类任务的 Metrics</title>
+  <meta name="description" content="">
 
   <link rel="stylesheet" href="/css/bootstrap.css">
   <link rel="stylesheet" href="/css/blog.css">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/mermaid.css">
-  <link rel="canonical" href="http://xuchong.github.com/archive/">
+  <link rel="canonical" href="http://xuchong.github.com/metrics/2016/11/02/classification-evaluation.html">
   <link rel="alternate" type="application/rss+xml" title="春风十里" href="http://xuchong.github.com/feed.xml">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
@@ -71,94 +70,66 @@
                 <div class="padding">
                     <div class="full col-sm-9">
                         <!-- page content -->
-                        <article class="post">
+                        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">Archive</h1>
+    <h1 class="post-title" itemprop="name headline">分类任务的 Metrics</h1>
+    <p class="post-meta"><time datetime="2016-11-02T22:01:00+08:00" itemprop="datePublished">Nov 2, 2016</time></p>
   </header>
 
-  <div class="post-content">
-    <!-- page top -->
+  <div class="post-content" itemprop="articleBody">
+    <hr />
 
-<div class="col-sm-12">
+<h3 id="section">评估方法</h3>
 
-  <h4>雨滴</h4>
+<p>当我们从经验数据中通过学习算法获取到模型后，需要对学习到的模型进行评估和度量。一般在test数据集上进行评估，从而区别出哪个模型更加优秀。根据任务的不同，可以将评估度量方法分为以下几类：回归问题的度量，分类问题的度量，概率分布函数的度量，检索问题的度量等。</p>
 
-  <h5>
-  一滴。两滴。。三滴。。。
-  </h5>
+<h4 id="section-1">1.回归问题的度量</h4>
 
-</div>
+<ul>
+  <li>Mean Absolute Error 平均绝对误差</li>
+  <li>Weighted Mean Absolute Error 加权平均绝对误差</li>
+  <li>Root Mean Squared Error 均方根误差</li>
+  <li>Root Mean Squared Logarithmic Error 均方根对数误差</li>
+</ul>
 
-<div class="col-sm-12">
-  <div class="page-header text-muted divider">
-    Archive | Categories
-  </div>
-</div>
+<h4 id="section-2">2.分类问题的度量</h4>
 
-<div class="row">
-  <!-- item -->
-  
-  <div class="col-md-3 text-center">
-    <div class="featurette-item">
-      <h4><span class="label label-inverse"><a href="/jekyll" style="color:white;">jekyll (1)</a></span></h4>
-    </div>
-  </div>
-  
-  <div class="col-md-3 text-center">
-    <div class="featurette-item">
-      <h4><span class="label label-inverse"><a href="/life" style="color:white;">life (1)</a></span></h4>
-    </div>
-  </div>
-  
-  <div class="col-md-3 text-center">
-    <div class="featurette-item">
-      <h4><span class="label label-inverse"><a href="/dataset" style="color:white;">dataset (1)</a></span></h4>
-    </div>
-  </div>
-  
-  <div class="col-md-3 text-center">
-    <div class="featurette-item">
-      <h4><span class="label label-inverse"><a href="/facedetection" style="color:white;">FaceDetection (1)</a></span></h4>
-    </div>
-  </div>
-  
-  <div class="col-md-3 text-center">
-    <div class="featurette-item">
-      <h4><span class="label label-inverse"><a href="/linux" style="color:white;">Linux (1)</a></span></h4>
-    </div>
-  </div>
-  
-  <div class="col-md-3 text-center">
-    <div class="featurette-item">
-      <h4><span class="label label-inverse"><a href="/shell" style="color:white;">Shell (1)</a></span></h4>
-    </div>
-  </div>
-  
-  <div class="col-md-3 text-center">
-    <div class="featurette-item">
-      <h4><span class="label label-inverse"><a href="/imageprocessing" style="color:white;">ImageProcessing (1)</a></span></h4>
-    </div>
-  </div>
-  
-  <div class="col-md-3 text-center">
-    <div class="featurette-item">
-      <h4><span class="label label-inverse"><a href="/cv" style="color:white;">CV (1)</a></span></h4>
-    </div>
-  </div>
-  
-  <div class="col-md-3 text-center">
-    <div class="featurette-item">
-      <h4><span class="label label-inverse"><a href="/metrics" style="color:white;">Metrics (1)</a></span></h4>
-    </div>
-  </div>
-  
+<ul>
+  <li>Log Loss 对数损失</li>
+  <li>Mean Consequential Error 平均间接损失</li>
+  <li>Mean Average Precision 平均精度均值</li>
+  <li>Multi Class Log Loss 多类对数损失</li>
+  <li>Hamming Loss 汉明损失</li>
+  <li>Mean Utility 均值效用</li>
+  <li>Matthews Correlation Coefficient 马修斯相关性系</li>
+</ul>
 
-</div>
+<h4 id="section-3">3.概率分布函数的度量</h4>
 
-<div class="row divider">
-   <div class="col-sm-12"><hr /></div>
-</div>
+<ul>
+  <li>Continuous Ranked Probability Score 连续分级概率评分</li>
+</ul>
+
+<h4 id="section-4">4.检索问题的度量</h4>
+
+<ul>
+  <li>Normalized Discounted Cumulative Gain 归一化贴现累积收益</li>
+  <li>Mean Average Precision 平均精度均值</li>
+  <li>Mean F Score 平均F值</li>
+</ul>
+
+<h4 id="section-5">5.其他</h4>
+
+<ul>
+  <li>Area Under Curve(AUC) 曲线下面积</li>
+  <li>Gini 基尼</li>
+  <li>Average Among Top P</li>
+</ul>
+
+<hr />
+
+<p><code class="highlighter-rouge">待续</code></p>
 
   </div>
 
