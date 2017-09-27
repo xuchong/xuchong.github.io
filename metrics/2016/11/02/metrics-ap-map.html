@@ -6,15 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>Archive</title>
-  <meta name="description" content=">  Blog of Xu R, Studying, Living, Creating .Love U & Me > > Machine Learning, Object Detection, Algorithm 's  follower
-">
+  <title>分类任务中常用的评估方法 Average Precision （AP） and Mean Average Precision （MAP）</title>
+  <meta name="description" content="">
 
   <link rel="stylesheet" href="/css/bootstrap.css">
   <link rel="stylesheet" href="/css/blog.css">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/mermaid.css">
-  <link rel="canonical" href="http://xuchong.github.com/archive/">
+  <link rel="canonical" href="http://xuchong.github.com/metrics/2016/11/02/metrics-ap-map.html">
   <link rel="alternate" type="application/rss+xml" title="春风十里" href="http://xuchong.github.com/feed.xml">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
@@ -71,94 +70,36 @@
                 <div class="padding">
                     <div class="full col-sm-9">
                         <!-- page content -->
-                        <article class="post">
+                        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">Archive</h1>
+    <h1 class="post-title" itemprop="name headline">分类任务中常用的评估方法 Average Precision （AP） and Mean Average Precision （MAP）</h1>
+    <p class="post-meta"><time datetime="2016-11-02T23:11:00+08:00" itemprop="datePublished">Nov 2, 2016</time></p>
   </header>
 
-  <div class="post-content">
-    <!-- page top -->
+  <div class="post-content" itemprop="articleBody">
+    <hr />
 
-<div class="col-sm-12">
+<p><strong>通常分类问题中，物体的类型依赖于分类器的阈值，阈值决定了它是鸟还是飞机。</strong></p>
 
-  <h4>雨滴</h4>
+<p>在介绍AP和MAP指标之前，我们先了解一些知识。</p>
 
-  <h5>
-  一滴。两滴。。三滴。。。
-  </h5>
+<blockquote>
+  <p>评价一个检索系统（例如搜索引擎）的优劣一般会关注两件事情：</p>
 
-</div>
+  <ol>
+    <li>检索出来的结果和想要搜索的内容有多么的相关（相关性），一般称为precision 查准率。</li>
+    <li>检索出来的正确的结果占总共的相关内容的比例（总相关内容包含：已检索出的相关内容和未检索出的相关内容），一般称为recall 查全率。</li>
+  </ol>
+</blockquote>
 
-<div class="col-sm-12">
-  <div class="page-header text-muted divider">
-    Archive | Categories
-  </div>
-</div>
+<p>本文将介绍什么是precision和recall，同时也会解释一些文献中对P-R曲线进行比较时存在的疑惑。</p>
 
-<div class="row">
-  <!-- item -->
-  
-  <div class="col-md-3 text-center">
-    <div class="featurette-item">
-      <h4><span class="label label-inverse"><a href="/jekyll" style="color:white;">jekyll (1)</a></span></h4>
-    </div>
-  </div>
-  
-  <div class="col-md-3 text-center">
-    <div class="featurette-item">
-      <h4><span class="label label-inverse"><a href="/life" style="color:white;">life (1)</a></span></h4>
-    </div>
-  </div>
-  
-  <div class="col-md-3 text-center">
-    <div class="featurette-item">
-      <h4><span class="label label-inverse"><a href="/dataset" style="color:white;">dataset (1)</a></span></h4>
-    </div>
-  </div>
-  
-  <div class="col-md-3 text-center">
-    <div class="featurette-item">
-      <h4><span class="label label-inverse"><a href="/facedetection" style="color:white;">FaceDetection (1)</a></span></h4>
-    </div>
-  </div>
-  
-  <div class="col-md-3 text-center">
-    <div class="featurette-item">
-      <h4><span class="label label-inverse"><a href="/linux" style="color:white;">Linux (1)</a></span></h4>
-    </div>
-  </div>
-  
-  <div class="col-md-3 text-center">
-    <div class="featurette-item">
-      <h4><span class="label label-inverse"><a href="/shell" style="color:white;">Shell (1)</a></span></h4>
-    </div>
-  </div>
-  
-  <div class="col-md-3 text-center">
-    <div class="featurette-item">
-      <h4><span class="label label-inverse"><a href="/imageprocessing" style="color:white;">ImageProcessing (1)</a></span></h4>
-    </div>
-  </div>
-  
-  <div class="col-md-3 text-center">
-    <div class="featurette-item">
-      <h4><span class="label label-inverse"><a href="/cv" style="color:white;">CV (1)</a></span></h4>
-    </div>
-  </div>
-  
-  <div class="col-md-3 text-center">
-    <div class="featurette-item">
-      <h4><span class="label label-inverse"><a href="/metrics" style="color:white;">Metrics (2)</a></span></h4>
-    </div>
-  </div>
-  
+<h4 id="section">鸟与飞机</h4>
 
-</div>
+<hr />
 
-<div class="row divider">
-   <div class="col-sm-12"><hr /></div>
-</div>
+<p><code class="highlighter-rouge">待续</code></p>
 
   </div>
 
